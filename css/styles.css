@@ -1,0 +1,36 @@
+/* Paleta de Colores y Tipografía Base */
+
+:root {
+    --color-neumorphic-base: #e0e5ec; /* Color de Fondo: Gris muy suave */
+    --color-primary: #34495e;    /* Azul Oscuro (Texto Principal) */
+    --color-accent-1: #e74c3c;   /* Rojo Ladrillo (Acento Principal) */
+    --color-accent-2: #3498db;   /* Azul Cielo (Acento Secundario) */
+    --color-shadow-dark: rgba(163, 177, 198, 0.6); /* Sombra oscura para Neumorfismo */
+    --color-shadow-light: rgba(255, 255, 255, 1); /* Sombra clara para Neumorfismo */
+    --max-content-width: 1280px; /* Más ancho aún */
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: var(--color-neumorphic-base); /* Fondo Único */
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ... otros estilos globales ... */
+
+/* Estilos de enlaces más pulidos */
+a {
+    color: var(--color-accent-2);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-accent-1);
+    text-decoration: none;
+}

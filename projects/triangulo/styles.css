@@ -1,0 +1,44 @@
+body {
+    display: flex; /* Para poner las formas una al lado de la otra */
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* --- DIBUJAR UN CÍRCULO --- */
+.circulo {
+    /* 1. Definir el tamaño base (un cuadrado) */
+    width: 150px;
+    height: 150px;
+    
+    /* 2. Aplicar el color */
+    background-color: #3498db; /* Azul */
+    
+    /* 3. Redondear los bordes al 50% */
+    /* Esto transforma el cuadrado en un círculo perfecto */
+    border-radius: 50%; 
+}
+
+
+/* --- DIBUJAR UN TRIÁNGULO --- */
+.triangulo {
+    /* 1. Definir el tamaño del elemento a cero */
+    width: 0;
+    height: 0;
+    
+    /* 2. Usar bordes para crear la forma */
+    /* El truco es darle bordes transparentes y uno visible.
+       Los bordes se encuentran en un punto central. */
+       
+    /* El tamaño de la base del triángulo (ancho total de los bordes laterales) */
+    border-left: 75px solid transparent; 
+    border-right: 75px solid transparent; 
+    
+    /* La altura y el color del triángulo */
+    border-bottom: 150px solid #e74c3c; /* Rojo */
+    
+    /* 75px (izq) + 75px (der) = 150px de base
+       150px (inferior) = 150px de altura */
+}

@@ -1,0 +1,134 @@
+/* --- ESTILOS NEUMÓRFICOS BASE --- */
+.neumorphic-card {
+    background-color: var(--color-neumorphic-base);
+    border-radius: 20px; /* Bordes muy suaves */
+    box-shadow: 8px 8px 16px var(--color-shadow-dark), 
+               -8px -8px 16px var(--color-shadow-light); /* Doble sombra para profundidad */
+    transition: all 0.2s ease;
+}
+
+.neumorphic-button {
+    box-shadow: 6px 6px 12px var(--color-shadow-dark), 
+               -6px -6px 12px var(--color-shadow-light);
+    cursor: pointer;
+}
+
+/* Efecto de 'presión' al hacer hover o clic */
+.neumorphic-button:hover {
+    box-shadow: 3px 3px 6px var(--color-shadow-dark), 
+               -3px -3px 6px var(--color-shadow-light);
+    transform: translateY(1px);
+}
+
+.neumorphic-circle {
+    box-shadow: inset 5px 5px 10px var(--color-shadow-dark), 
+                inset -5px -5px 10px var(--color-shadow-light); /* Sombra interna */
+}
+/* ------------------------------------- */
+
+
+/* --- MÓDULOS DEL CONTENIDO --- */
+.columna-izquierda .floating-card {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background: linear-gradient(45deg, var(--color-accent-2), #1abc9c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-text {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.module-card {
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+/* Títulos de Sección */
+.contenido-module .section-title {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-accent-2);
+    padding-left: 15px;
+}
+
+.contenido-module .ejercicio-tech {
+    font-size: 1.3em;
+    color: var(--color-accent-1);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* --- LISTAS DE PROYECTOS/EJERCICIOS --- */
+.list-cards {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-item-link {
+    display: block;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    background-color: var(--color-neumorphic-base);
+    border-radius: 12px;
+    color: var(--color-primary);
+    transition: all 0.2s ease;
+    
+    /* Neumorfismo para cada item */
+    box-shadow: 4px 4px 8px var(--color-shadow-dark), 
+               -4px -4px 8px var(--color-shadow-light);
+}
+
+.list-item-link:hover {
+    /* Efecto de presión al hacer hover */
+    box-shadow: 2px 2px 5px var(--color-shadow-dark), 
+                -2px -2px 5px var(--color-shadow-light);
+    background-color: var(--color-neumorphic-base);
+    transform: translateY(1px);
+    color: var(--color-accent-1);
+}
+
+/* Etiqueta Sticky */
+.tech-tag-sticky {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.tag-accent-1 {
+    background: linear-gradient(135deg, var(--color-accent-1), #c0392b);
+    color: white;
+}
+/* Estilo para la imagen dentro del círculo del avatar (AJUSTADO) */
+.perfil-img {
+    width: 100%;             /* La imagen ocupa todo el ancho del círculo. */
+    height: 100%;            /* La imagen ocupa todo el alto del círculo. */
+    object-fit: cover;       /* CRUCIAL: Recorta la imagen para que llene el contenedor sin distorsionarse. */
+    border-radius: 50%;      /* Asegura que la imagen sea circular (se hereda del contenedor, pero es buena práctica). */
+    display: block;
+}
+
+/* Opcional: Asegúrate de que el contenedor del avatar ya no tenga el fondo de texto */
+.avatar-container {
+    /* ... (otros estilos de neumorfismo) ... */
+    background: none; /* Asegura que no haya un degradado de fondo visible detrás de la imagen */
+}
+
+/* Es buena práctica asegurar que el texto "Foto" se oculte al usar la imagen */
+.avatar-container .avatar-text {
+    display: none;
+}

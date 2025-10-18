@@ -1,0 +1,81 @@
+/* Estilos de Layout: Full Width y Contenido Centralizado */
+
+/* Clase para que las secciones ocupen todo el ancho */
+.full-width-section {
+    width: 100%;
+}
+
+/* Contenido dentro de las secciones Full-Width (para centrar) */
+.nav-content, .header-content, .main-footer p {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --- NAVBAR (Fondo Base Neumórfico) --- */
+.main-nav {
+    background-color: var(--color-neumorphic-base);
+    box-shadow: 0 2px 5px var(--color-shadow-dark); /* Sombra sutil debajo */
+    padding: 15px 0;
+}
+/* ... estilos de links de nav ... */
+
+/* --- HEADER (Contraste Fuerte) --- */
+.main-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #3f556d 100%); /* Degradado oscuro */
+    color: white;
+    padding: 50px 0;
+    margin-bottom: 40px;
+}
+.main-header .main-title {
+    font-size: 3.5em;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: white; 
+    border-left: 8px solid var(--color-accent-1); /* Borde de acento */
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+.header-description {
+    color: var(--color-accent-2);
+    font-size: 1.4em;
+    font-style: italic;
+    padding-left: 20px;
+    font-weight: 300;
+}
+
+/* --- GRID DE CONTENIDO (La estructura del sitio) --- */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px 40px 40px;
+}
+
+.contenedor-principal {
+    width: 100%; 
+    max-width: 1200px;
+    padding: 0;
+    box-shadow: none;
+    position: relative;
+}
+
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 60px; /* Más espacio */
+}
+
+/* --- FOOTER (Dark) --- */
+.main-footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+.main-footer p {
+    color: var(--color-text-subtle);
+    margin: 0;
+    padding: 0;
+}

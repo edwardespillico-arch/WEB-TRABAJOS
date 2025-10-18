@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja{
+            border: 4px solid red;
+            background-color: yellow;
+            position:absolute;
+            width: 100px;
+            height: 100px;
+            top:200px
+        }
+
+    </style>
+    <script>
+        a = 0;
+        b = 250;
+        function mover(){
+            caja = document.querySelector(".caja")
+            caja.style.left = a+"px"
+            a+= 10;
+        }
+        function moveras(){
+            caja = document.querySelector(".caja")
+            caja.style.left = a+"px"
+            a-= 10;
+        }
+        function arriba(){
+            caja = document.querySelector(".caja")
+            caja.style.top = b+"px"
+            b-= 10;
+        }function abajo(){
+            caja = document.querySelector(".caja")
+            caja.style.top = b+"px"
+            b+= 10;
+        }
+          window.addEventListener("keydown", function (event) {
+            switch (event.key.toLowerCase()) {
+                case "w":
+                    arriba();
+                    break;
+                case "a":
+                    moveras();
+                    break;
+                case "s":
+                    abajo();
+                    break;
+                case "d":
+                    mover();
+                    break;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="caja"></div>
+    <button onclick="mover()">DERECHA</button>
+    <button onclick="moveras()"> IZQUIERDA</button>
+    <button onclick="arriba()"> ARRIBA</button>
+    <button onclick="abajo()"> ABAJO</button>
+</body>
+</html>

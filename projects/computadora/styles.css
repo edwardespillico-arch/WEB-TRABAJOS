@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.computadora {
+    position: relative;
+}
+
+/* 1. MONITOR (marco) */
+.monitor {
+    width: 300px;
+    height: 200px;
+    background-color: #333; /* Marco oscuro */
+    border: 10px solid #222;
+    border-radius: 5px;
+    position: relative; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. PANTALLA INTERACTIVA (textarea) */
+#escritorio {
+    /* Ocupar casi todo el espacio del monitor */
+    width: 90%;
+    height: 90%;
+    
+    /* Posicionamiento y color */
+    background-color: #0077ff; /* Color de pantalla encendida */
+    color: white; /* Color del texto que se escribirá */
+    font-family: monospace; /* Fuente de terminal antigua */
+    font-size: 14px;
+    padding: 10px; /* Espacio interior para el texto */
+    
+    /* Centrar dentro del monitor */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Eliminar estilos predeterminados del textarea */
+    border: none;
+    resize: none; /* Evita que el usuario cambie el tamaño del área de texto */
+    outline: none; /* Elimina el borde de enfoque cuando se hace clic */
+}
+
+
+/* 3. BASE/SOPORTE (sin cambios) */
+.base {
+    width: 150px;
+    height: 20px;
+    background-color: #444; 
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
